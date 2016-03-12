@@ -1,8 +1,4 @@
 angular.module('myApp')
-.controller('test1',['$scope', function($scope){
-	$scope.testdata = [
-						{name:'vipin'},
-						{name:'vipin1'},
-						{name:'vipin2'}
-						];
-}]);
+.controller('test1',['$scope','testService', function($scope,testService){
+	$scope.testdata = testService.view1();
+}])
